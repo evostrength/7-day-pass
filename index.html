@@ -22,7 +22,15 @@
     
     <!-- Mailchimp Pop-Up-->
     <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
-    <script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"635f6c4083d39a14bc94c8051","lid":"b47c4ce89c"}) })</script>
+    <script>
+    function showMailingPopUp() {
+         require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"635f6c4083d39a14bc94c8051","lid":"b47c4ce89c"}) })
+         document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    };
+
+    document.getElementById("open-popup").onclick = function() {showMailingPopUp()};
+    </script>
+
 
   </head>
 
@@ -53,7 +61,7 @@
         <div class="container">
           <h1 class="masthead-heading mb-0">Try us out for 7 days</h1>
           <h2 class="masthead-subheading mb-0">Absolutely no obligations!</h2>
-          <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Sign Up Now!</a>
+          <!--<a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Sign Up Now!</a>-->
           <button id="open-popup" class="btn btn-primary btn-xl rounded-pill mt-5">Subscribe to our mailing list</button>
         </div>
       </div>
