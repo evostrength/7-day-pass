@@ -19,23 +19,6 @@
 
     <!-- Custom styles for this template -->
     <link href="css/one-page-wonder.min.css" rel="stylesheet">
-    
-    <!-- Mailchimp Pop-Up-->
-    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
-    
-    <script type="text/javascript">
-       function showMailingPopUp() {
-           require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"635f6c4083d39a14bc94c8051","lid":"b47c4ce89c"}) })
-           document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";                  
-           document.cookie = "MCPopupSubscribed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";                  
-    };
-
-    $(function() {
-       $(".open-popup").on('click', function() { 
-       showMailingPopUp();
-    });
-  });
-</script>
 
 
   </head>
@@ -142,6 +125,23 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Mailchimp Pop-Up-->
+    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+    
+    <script type="text/javascript">
+       function showMailingPopUp() {
+           require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"635f6c4083d39a14bc94c8051","lid":"b47c4ce89c"}) })
+           document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";                  
+           document.cookie = "MCPopupSubscribed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";                  
+    };
+
+    $(function() {
+       $(".open-popup").on('click', function() { 
+       showMailingPopUp();
+    });
+  });
+</script>
 
   </body>
 
